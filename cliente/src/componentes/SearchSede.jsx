@@ -14,7 +14,7 @@ const SearchSede = () => {
      salasver()
         if (nivel) {
             // Determina el archivo JSON a cargar basado en el nivel seleccionado
-            const fileName = nivel === 'Nivel Medio' ? 'nivelmedio.json' : 'segundo.json';
+            const fileName = nivel === 'Tercer Ciclo y Nivel Medio' ? 'nivelmedio.json' : 'segundo.json';
             
             fetch(`./${fileName}`)
                 .then(response => response.json())
@@ -75,7 +75,7 @@ const SearchSede = () => {
                         <select value={nivel} onChange={(e) => setNivel(e.target.value)}>
                             <option value="">Seleccione el nivel</option>
                             <option value="Primer y Segundo Ciclo">Primer y Segundo Ciclo</option>
-                            <option value="Nivel Medio">Nivel Medio</option>
+                            <option value="Tercer Ciclo y Nivel Medio">Nivel Medio</option>
                         </select>
                     </div>
                 </div>
@@ -105,7 +105,7 @@ const SearchSede = () => {
             {result && (
                 <div>
                     <p className="subtitle is-5">Su sede de evaluación es: {result}</p>
-                    <p className="subtitle is-5">Su sala es Nro.: {resultsala}</p>
+                    <p className="subtitle is-5">Su sala es Nro: {resultsala}</p>
                     {ubicacion && (
                         <button className="button is-success" onClick={() => window.open(ubicacion, '_blank')}>
                             Abrir Ubicación
