@@ -4,10 +4,14 @@ const SearchSede = () => {
     const [ci, setCi] = useState('');
     const [nivel, setNivel] = useState('');
     const [result, setResult] = useState(null);
+    const [resultsala, setResultsala] = useState(null);
     const [sedes, setSedes] = useState([]);
     const [ubicacion, setUbicacion] = useState(null);
+    const [salas, setSala] = useState(null);
+
 
     useEffect(() => {
+     salasver()
         if (nivel) {
             // Determina el archivo JSON a cargar basado en el nivel seleccionado
             const fileName = nivel === 'Nivel Medio' ? 'nivelmedio.json' : 'segundo.json';
@@ -19,6 +23,14 @@ const SearchSede = () => {
         }
     }, [nivel]);
 
+    function salasver(){
+       
+        fetch("./sala.json")
+        .then(response => response.json())
+        .then(data => setSala(data))
+        .catch(error => console.error('Error cargando el archivo JSON:', error));
+        
+    }
     const handleCancel = () => {
         setCi('');
         setNivel('');
@@ -26,19 +38,32 @@ const SearchSede = () => {
         setUbicacion(null);
         setSedes([]);
     };
+
     const handleSearch = () => {
         const found = sedes.find(sede => 
             parseInt(ci) >= sede.ci_desde && 
             parseInt(ci) <= sede.ci_hasta
         );
 
+        const found1 = salas.find(sala => 
+            parseInt(ci) === sala.cedula
+           
+        );
+       
         if (found) {
             setResult(found.sede);
             setUbicacion(found.ubicacion);
+    
         } else {
             setResult('No se encontró la sede.');
             setUbicacion(null);
         }
+        if (found1) {
+            setResultsala(found1.sala);
+            console.log(found1.sala)
+        }
+
+    
     };
 
     return (
@@ -80,6 +105,7 @@ const SearchSede = () => {
             {result && (
                 <div>
                     <p className="subtitle is-5">Su sede de evaluación es: {result}</p>
+                    <p className="subtitle is-5">Su sala es Nro.: {resultsala}</p>
                     {ubicacion && (
                         <button className="button is-success" onClick={() => window.open(ubicacion, '_blank')}>
                             Abrir Ubicación
