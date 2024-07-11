@@ -14,7 +14,7 @@ const SearchSede = () => {
      salasver()
         if (nivel) {
             // Determina el archivo JSON a cargar basado en el nivel seleccionado
-            const fileName = nivel === 'Tercer Ciclo y Nivel Medio' ? 'nivelmedio.json' : 'segundo.json';
+            const fileName = nivel === 'Nivel Medio' ? 'nivelmedio.json' : 'segundo.json';
             
             fetch(`./${fileName}`)
                 .then(response => response.json())
@@ -75,7 +75,7 @@ const SearchSede = () => {
                         <select value={nivel} onChange={(e) => setNivel(e.target.value)}>
                             <option value="">Seleccione el nivel</option>
                             <option value="Primer y Segundo Ciclo">Primer y Segundo Ciclo</option>
-                            <option value="Tercer Ciclo y Nivel Medio">Nivel Medio</option>
+                            <option value="Nivel Medio">Tercer Ciclo y Nivel Medio</option>
                         </select>
                     </div>
                 </div>
