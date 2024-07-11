@@ -1,0 +1,113 @@
+[ 
+{ 
+"idnumero":1,
+"sede":"Col. Nac. EMD Dr. Pedro P. Peña",
+"ci_desde":610647,
+"ci_hasta":3716567,
+"ubicacion":"https://maps.app.goo.gl/LjkiVvZiRTKV8dkz9",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":2,
+"sede":"Centro Educativo Subv. Parroquial CED",
+"ci_desde":3719127,
+"ci_hasta":3928867,
+"ubicacion":"https://maps.app.goo.gl/oWQf89v86yQj47eD8",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":3,
+"sede":"Esc. Básica Nº 219 Enrique Solano López",
+"ci_desde":3931642,
+"ci_hasta":4195518,
+"ubicacion":"https://maps.app.goo.gl/eGxjkNRNoynezE9c8",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":4,
+"sede":"Colegio Privado Subvencionado Maristas Champagnat",
+"ci_desde":4198502,
+"ci_hasta":4403599,
+"ubicacion":"https://maps.app.goo.gl/TrZtQp4hezEz8kJa9",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":5,
+"sede":"Centro Educativo El Amanecer",
+"ci_desde":4408501,
+"ci_hasta":4671338,
+"ubicacion":"https://maps.app.goo.gl/4VYCJKzN7h7SWgQU6",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":6,
+"sede":"Esc. Básica Nº 6049 Santa Clara",
+"ci_desde":4674189,
+"ci_hasta":4954788,
+"ubicacion":"https://maps.app.goo.gl/yYDzx3ntNbZNWMSn9",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":7,
+"sede":"Col. Nac. San Roque G. de Santa Cruz",
+"ci_desde":4954889,
+"ci_hasta":5219376,
+"ubicacion":"https://maps.app.goo.gl/XCyWmUQxU3gQ8cEk8",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":8,
+"sede":"Esc. Básica Nº 1872 Prof. Zulma Yolanda Paniagua",
+"ci_desde":5219859,
+"ci_hasta":5483380,
+"ubicacion":"https://maps.app.goo.gl/XJaGjBJzJ2U4Uta5A",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":9,
+"sede":"Esc. Básica Nº 282 Cnel. Florentín Oviedo",
+"ci_desde":5483410,
+"ci_hasta":5655340,
+"ubicacion":"https://maps.app.goo.gl/JvAmBqSq2PnTvhCw7",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":10,
+"sede":"Esc. Básica Nº 347 Gral. Bernardino Caballero",
+"ci_desde":5657773,
+"ci_hasta":5906865,
+"ubicacion":"https://maps.app.goo.gl/uAcU4BBwVyhogG4G6",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":11,
+"sede":"Instituto de Formación Docente de Cnel. Oviedo",
+"ci_desde":5908948,
+"ci_hasta":6178686,
+"ubicacion":"https://maps.app.goo.gl/DtxwYXe5Zn9PqKWG7",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":12,
+"sede":"Esc. Básica Nº 1973 Costa Alegre",
+"ci_desde":6181628,
+"ci_hasta":6749374,
+"ubicacion":"https://maps.app.goo.gl/L2kwCXN4Hkd2aF588",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":13,
+"sede":"Col. Nac. 12 de Junio",
+"ci_desde":6752048,
+"ci_hasta":7465329,
+"ubicacion":"https://maps.app.goo.gl/ZHtR5gEmKW2sXvNSA",
+"nivel":"Tercer Ciclo y Media"
+},
+{ 
+"idnumero":14,
+"sede":"Colegio Nacional Costa Alegre",
+"ci_desde":7467295,
+"ci_hasta":8025671,
+"ubicacion":"https://maps.app.goo.gl/9UjYkh2LquzaozdU6",
+"nivel":"Tercer Ciclo y Media"
+}]

@@ -1,0 +1,58 @@
+[
+    {
+        "ci_desde": 812196,
+        "ci_hasta": 4391806,
+        "sede": "Col. Nac. EMD Dr. Pedro P. Peña",
+        "ubicacion":"https://maps.app.goo.gl/LjkiVvZiRTKV8dkz9",
+        "nivel": "Primer y Segundo Ciclo"
+    },
+    {
+        "ci_desde": 4392706,
+        "ci_hasta": 4896692,
+        "sede": "Centro Educativo Subv. Parroquial CED",
+        "ubicacion":"https://maps.app.goo.gl/oWQf89v86yQj47eD8",
+        "nivel": "Primer y Segundo Ciclo"
+    },
+    {
+        "ci_desde": 4897739,
+        "ci_hasta": 5338159,
+        "sede": "Colegio Privado Subvencionado Maristas Champagnat",
+        "ubicacion":"https://maps.app.goo.gl/TrZtQp4hezEz8kJa9",
+        "nivel": "Primer y Segundo Ciclo"
+    },
+    {
+        "ci_desde": 5338197,
+        "ci_hasta": 5643445,
+        "sede": "Centro Educativo El Amanecer",
+       "ubicacion":"https://maps.app.goo.gl/4VYCJKzN7h7SWgQU6",
+        "nivel": "Primer y Segundo Ciclo"
+    },
+    {
+        "ci_desde": 5644997,
+        "ci_hasta": 6035029,
+        "sede": "Esc. Basica Nro 6049 Santa Clara",
+       "ubicacion":"https://maps.app.goo.gl/yYDzx3ntNbZNWMSn9",
+        "nivel": "Primer y Segundo Ciclo"
+    },
+    {
+        "ci_desde": 6037034,
+        "ci_hasta": 6670324,
+        "sede": "Col. Nac. San Roque G. de Santa Cruz",
+       "ubicacion":"https://maps.app.goo.gl/XCyWmUQxU3gQ8cEk8",
+        "nivel": "Primer y Segundo Ciclo"
+    },
+    {
+        "ci_desde": 6672076,
+        "ci_hasta": 7315092,
+        "sede": "Esc. Basica Nro 347 Gral. Bernandino Caballero",
+        "ubicacion":"https://maps.app.goo.gl/uAcU4BBwVyhogG4G6",
+        "nivel": "Primer y Segundo Ciclo"
+    },
+    {
+        "ci_desde": 7326126,
+        "ci_hasta": 8373100,
+        "sede": "Instituto de Formacion Docente de Cnel. Oviedo",
+       "ubicacion":"https://maps.app.goo.gl/DtxwYXe5Zn9PqKWG7",
+        "nivel": "Primer y Segundo Ciclo"
+    }
+]
