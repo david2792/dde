@@ -9,9 +9,9 @@ function App() {
 
   return (
     <div className="App">
-    <header className="App-header">
+       <img src="./dde.png" alt="" />       
         <SearchSede />
-    </header>
+
 </div>
 );
 };

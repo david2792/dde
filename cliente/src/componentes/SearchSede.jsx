@@ -43,7 +43,7 @@ const SearchSede = () => {
 
     return (
         <div>
-            <h1 className="title is-1 is-spaced">Búsqueda de Sede de Evaluación</h1>
+            <h1 className="title is-3 is-spaced">Búsqueda de Sede de Evaluación</h1>
             <div className="field">
                 <div className="control">
                     <div className="select is-large is-danger">
