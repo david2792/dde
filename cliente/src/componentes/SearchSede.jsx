@@ -113,7 +113,7 @@ const SearchSede = () => {
                     )}
                 </div>
             )}
-            <p className="subtitle is-5">Administración Mag. Perla Arguello</p>
+            <p className="subtitle is-8">Directora Departamental Mag. Perla Arguello</p>
         </div>
     );
 };
