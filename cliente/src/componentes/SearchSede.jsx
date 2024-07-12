@@ -8,10 +8,11 @@ const SearchSede = () => {
     const [sedes, setSedes] = useState([]);
     const [ubicacion, setUbicacion] = useState(null);
     const [salas, setSala] = useState(null);
+    
 
 
     useEffect(() => {
-     salasver()
+   
         if (nivel) {
             // Determina el archivo JSON a cargar basado en el nivel seleccionado
             const fileName = nivel === 'Nivel Medio' ? 'nivelmedio.json' : 'segundo.json';
@@ -20,15 +21,24 @@ const SearchSede = () => {
                 .then(response => response.json())
                 .then(data => setSedes(data))
                 .catch(error => console.error('Error cargando el archivo JSON:', error));
+        salasver()
         }
+    
     }, [nivel]);
 
     function salasver(){
-       
+       if(nivel == "Nivel Medio"){
         fetch("./sala.json")
         .then(response => response.json())
         .then(data => setSala(data))
         .catch(error => console.error('Error cargando el archivo JSON:', error));
+       }else{
+        fetch("./sala2.json")
+        .then(response => response.json())
+        .then(data => setSala(data))
+        .catch(error => console.error('Error cargando el archivo JSON:', error));
+       }
+       
         
     }
     const handleCancel = () => {
@@ -38,30 +48,41 @@ const SearchSede = () => {
         setUbicacion(null);
         setSedes([]);
     };
-
+function sa(){
+    const found1 = salas.find(sala => 
+        parseInt(ci) === sala.cedula
+       
+    );
+    if (found1) {
+        setResultsala(found1.sala);
+        console.log(found1.sala)
+    }
+}
     const handleSearch = () => {
         const found = sedes.find(sede => 
             parseInt(ci) >= sede.ci_desde && 
             parseInt(ci) <= sede.ci_hasta
         );
-
-        const found1 = salas.find(sala => 
+        const found3 = salas.find(sala => 
             parseInt(ci) === sala.cedula
            
         );
+        console.log(found3)
+      
+            if (found && found3!=undefined) {
+                setResult(found.sede);
+                setUbicacion(found.ubicacion);
+                sa()
+        
+            } else {
+                setResult('No se encontró la sede.');
+                setResultsala(null)
+                setUbicacion(null);
+            }
+          
+        
        
-        if (found) {
-            setResult(found.sede);
-            setUbicacion(found.ubicacion);
-    
-        } else {
-            setResult('No se encontró la sede.');
-            setUbicacion(null);
-        }
-        if (found1) {
-            setResultsala(found1.sala);
-            console.log(found1.sala)
-        }
+        
 
     
     };
