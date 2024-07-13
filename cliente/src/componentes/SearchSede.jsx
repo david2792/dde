@@ -15,16 +15,26 @@ const SearchSede = () => {
    
         if (nivel) {
             // Determina el archivo JSON a cargar basado en el nivel seleccionado
-            const fileName = nivel === 'Nivel Medio' ? 'nivelmedio.json' : 'segundo.json';
-            
+            const archivosJSON = {
+                "Nivel Medio": "nivelmedio.json",
+                "Primer y Segundo Ciclo": "segundo.json",
+                "Inicial": "inicio.json",
+                // Agregar más entradas para otros niveles
+              };
+          //  const fileName = nivel === 'Nivel Medio' ? 'nivelmedio.json' : 'segundo.json';
+            // Obtener el nombre de archivo correspondiente al nivel
+             const fileName = archivosJSON[nivel];
+
             fetch(`./${fileName}`)
                 .then(response => response.json())
                 .then(data => setSedes(data))
                 .catch(error => console.error('Error cargando el archivo JSON:', error));
         salasver()
         }
-    
+    console.log()
     }, [nivel]);
+
+
 
     function salasver(){
        if(nivel == "Nivel Medio"){
@@ -32,8 +42,13 @@ const SearchSede = () => {
         .then(response => response.json())
         .then(data => setSala(data))
         .catch(error => console.error('Error cargando el archivo JSON:', error));
-       }else{
+       }else if(nivel == "Primer y Segundo Ciclo"){
         fetch("./sala2.json")
+        .then(response => response.json())
+        .then(data => setSala(data))
+        .catch(error => console.error('Error cargando el archivo JSON:', error));
+       }else{
+        fetch("./sala3.json")
         .then(response => response.json())
         .then(data => setSala(data))
         .catch(error => console.error('Error cargando el archivo JSON:', error));
@@ -95,6 +110,7 @@ function sa(){
                     <div className="select is-large is-danger">
                         <select value={nivel} onChange={(e) => setNivel(e.target.value)}>
                             <option value="">Seleccione el nivel</option>
+                            <option value="Inicial">Inicial</option>
                             <option value="Primer y Segundo Ciclo">Primer y Segundo Ciclo</option>
                             <option value="Nivel Medio">Tercer Ciclo y Nivel Medio</option>
                         </select>
