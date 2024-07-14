@@ -8,54 +8,40 @@ const SearchSede = () => {
     const [sedes, setSedes] = useState([]);
     const [ubicacion, setUbicacion] = useState(null);
     const [salas, setSala] = useState(null);
-    
-
 
     useEffect(() => {
-   
         if (nivel) {
             // Determina el archivo JSON a cargar basado en el nivel seleccionado
             const archivosJSON = {
                 "Nivel Medio": "nivelmedio.json",
                 "Primer y Segundo Ciclo": "segundo.json",
                 "Inicial": "inicio.json",
-                // Agregar más entradas para otros niveles
-              };
-          //  const fileName = nivel === 'Nivel Medio' ? 'nivelmedio.json' : 'segundo.json';
-            // Obtener el nombre de archivo correspondiente al nivel
-             const fileName = archivosJSON[nivel];
+            };
+            const fileName = archivosJSON[nivel];
 
             fetch(`./${fileName}`)
                 .then(response => response.json())
                 .then(data => setSedes(data))
                 .catch(error => console.error('Error cargando el archivo JSON:', error));
-        salasver()
+            
+            salasver();
         }
-    console.log()
     }, [nivel]);
 
+    const salasver = () => {
+        const archivosSala = {
+            "Nivel Medio": "sala.json",
+            "Primer y Segundo Ciclo": "sala2.json",
+            "Inicial": "sala3.json",
+        };
+        const salaFileName = archivosSala[nivel];
 
+        fetch(`./${salaFileName}`)
+            .then(response => response.json())
+            .then(data => setSala(data))
+            .catch(error => console.error('Error cargando el archivo JSON:', error));
+    };
 
-    function salasver(){
-       if(nivel == "Nivel Medio"){
-        fetch("./sala.json")
-        .then(response => response.json())
-        .then(data => setSala(data))
-        .catch(error => console.error('Error cargando el archivo JSON:', error));
-       }else if(nivel == "Primer y Segundo Ciclo"){
-        fetch("./sala2.json")
-        .then(response => response.json())
-        .then(data => setSala(data))
-        .catch(error => console.error('Error cargando el archivo JSON:', error));
-       }else{
-        fetch("./sala3.json")
-        .then(response => response.json())
-        .then(data => setSala(data))
-        .catch(error => console.error('Error cargando el archivo JSON:', error));
-       }
-       
-        
-    }
     const handleCancel = () => {
         setCi('');
         setNivel('');
@@ -63,48 +49,30 @@ const SearchSede = () => {
         setUbicacion(null);
         setSedes([]);
     };
-function sa(){
-    const found1 = salas.find(sala => 
-        parseInt(ci) === sala.cedula
-       
-    );
-    if (found1) {
-        setResultsala(found1.sala);
-        console.log(found1.sala)
-    }
-}
+
     const handleSearch = () => {
         const found = sedes.find(sede => 
             parseInt(ci) >= sede.ci_desde && 
             parseInt(ci) <= sede.ci_hasta
         );
-        const found3 = salas.find(sala => 
+        const foundSala = salas.find(sala => 
             parseInt(ci) === sala.cedula
-           
         );
-        console.log(found3)
-      
-            if (found && found3!=undefined) {
-                setResult(found.sede);
-                setUbicacion(found.ubicacion);
-                sa()
-        
-            } else {
-                setResult('No se encontró la sede.');
-                setResultsala(null)
-                setUbicacion(null);
-            }
-          
-        
-       
-        
 
-    
+        if (found && foundSala) {
+            setResult(found.sede);
+            setUbicacion(found.ubicacion);
+            setResultsala(foundSala.sala);
+        } else {
+            setResult('No se encontró la sede.');
+            setResultsala(null);
+            setUbicacion(null);
+        }
     };
 
     return (
         <div>
-            <h1 className="title is-3 is-spaced">Búsqueda de Sede de Evaluación</h1>
+            <h1 className="title is-3 is-spaced">Búsqueda de Sede de Evaluación</h1>   
             <div className="field">
                 <div className="control">
                     <div className="select is-large is-danger">
@@ -129,14 +97,16 @@ function sa(){
                     />
                 </div>
             </div>
+            <a rel="stylesheet" href="https://mec.gov.py/talento/cms/sedes-de-evaluacion-conv-08-2024/  ">
+            Verificar con la documentación oficial del MEC</a>
             <div className="field">
                 <div className="control">
                     <button className="button is-danger is-light is-medium" onClick={handleSearch} disabled={!nivel || !ci}>
                         Buscar
                     </button>
                     <button className="button is-warning is-light is-medium" onClick={handleCancel} disabled={!ci && !nivel}>
-    Cancelar
-</button>
+                        Cancelar
+                    </button>
                 </div>
             </div>
             {result && (
