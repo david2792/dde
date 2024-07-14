@@ -11,6 +11,8 @@ const SearchSede = () => {
 
     useEffect(() => {
         if (nivel) {
+           
+
             // Determina el archivo JSON a cargar basado en el nivel seleccionado
             const archivosJSON = {
                 "Nivel Medio": "nivelmedio.json",
@@ -25,6 +27,7 @@ const SearchSede = () => {
                 .catch(error => console.error('Error cargando el archivo JSON:', error));
             
             salasver();
+            limpiar(); // Reset all fields when the level is changed
         }
     }, [nivel]);
 
@@ -41,13 +44,23 @@ const SearchSede = () => {
             .then(data => setSala(data))
             .catch(error => console.error('Error cargando el archivo JSON:', error));
     };
-
+    const limpiar =()=>{
+        setCi('');
+      //  setNivel('');
+        setResult(null);
+        setUbicacion(null);
+        setSedes([]);
+        setResultsala(null);
+        setSala(null);
+    }
     const handleCancel = () => {
         setCi('');
         setNivel('');
         setResult(null);
         setUbicacion(null);
         setSedes([]);
+        setResultsala(null);
+        setSala(null);
     };
 
     const handleSearch = () => {
@@ -72,7 +85,7 @@ const SearchSede = () => {
 
     return (
         <div>
-            <h1 className="title is-3 is-spaced">Búsqueda de Sede de Evaluación</h1>   
+            <h1 className="title is-3 is-spaced">Búsqueda de Sede de Evaluación</h1>
             <div className="field">
                 <div className="control">
                     <div className="select is-large is-danger">
@@ -97,8 +110,6 @@ const SearchSede = () => {
                     />
                 </div>
             </div>
-            <a rel="stylesheet" href="https://mec.gov.py/talento/cms/sedes-de-evaluacion-conv-08-2024/  ">
-            Verificar con la documentación oficial del MEC</a>
             <div className="field">
                 <div className="control">
                     <button className="button is-danger is-light is-medium" onClick={handleSearch} disabled={!nivel || !ci}>
