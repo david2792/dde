@@ -2,6 +2,120 @@
     {
         "sala": "1",
         "orden": 1,
+        "cedula": "610647",
+        "nombre_apellido": "7 LUIS ALBERTO PEREZ INSFRAN "
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "640739",
+        "nombre_apellido": "JUSTO WALDIR RAMON BALBUENA SOTO "
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "812196",
+        "nombre_apellido": "ANIBAL GIMENEZ VELAZQUEZ "
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "818581",
+        "nombre_apellido": "ENRY FABRICIANO CRISTALDO CHAPARRO"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "825551",
+        "nombre_apellido": "ALDA MARGARITA ENCISO DE PORTILLO "
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "834435",
+        "nombre_apellido": "MARIANO DE JESUS MARECOS"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "860713",
+        "nombre_apellido": "TEODOLINA SANCHEZ DE MIRANDA"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "869696",
+        "nombre_apellido": "FRANCISCO CUENCA LEGUIZAMON"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "874518",
+        "nombre_apellido": "NILCE LOMBARDO CRISTALDO"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "885283",
+        "nombre_apellido": "GLADYS CHILAVERT DE MARTINEZ"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "885300",
+        "nombre_apellido": "NELSON EZEQUIEL CENTURION MEDINA"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "917391",
+        "nombre_apellido": "AGUSTIN MURRAY"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "925387",
+        "nombre_apellido": "ZULMA BEATRIZ ESPINOZA DE SANABRIA"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "970085",
+        "nombre_apellido": "MARIA MERCEDES GUGGIARI VELAZQUEZ"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "981084",
+        "nombre_apellido": "ELBA CACERES DE SCAVONE"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "995076",
+        "nombre_apellido": "LILIO MENCIA BRITOS"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "995766",
+        "nombre_apellido": "OSCAR ISAIAS IBARROLA SANTACRUZ"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "970085",
+        "nombre_apellido": "LUZ DIVINA FLEITAS DE PRESENTADO"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
+        "cedula": "998835",
+        "nombre_apellido": "JUANA BEATRIZ ENCISO DE BOGADO"
+    },
+    {
+        "sala": "1",
+        "orden": 1,
         "cedula": "1008943",
         "nombre_apellido": "YENNIFER VERENICE MORA MEDINA"
     },
@@ -39,7 +153,7 @@
         "sala": "1",
         "orden": 7,
         "cedula": "1102062",
-        "nombre_apellido": "NORMA ELIZABETH RAMIREZ DE FARI"
+        "nombre_apellido": "NORMA ELIZABETH RAMIREZ DE FARIÑA"
     },
     {
         "sala": "1",
@@ -57,7 +171,7 @@
         "sala": "1",
         "orden": 10,
         "cedula": "1132859",
-        "nombre_apellido": "MAGIN LUIS VILLALBA NU"
+        "nombre_apellido": "MAGIN LUIS VILLALBA NUÑEZ"
     },
     {
         "sala": "1",
@@ -25685,6 +25799,7 @@
         "cedula": "5034876",
         "nombre_apellido": "LUIS FERNANDO JARA SOSA"
     },
+
     {
         "sala": "144",
         "orden": 4282,
