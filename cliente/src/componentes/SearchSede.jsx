@@ -5,28 +5,41 @@ const SearchSede = () => {
     const [result, setResult] = useState(null);
     const [ubicacion, setUbicacion] = useState(null);
     const [sedes, setSedes] = useState([]);
+    const [salaResult, setSalaResult] = useState(null);
+    const [salas, setSalas] = useState([]);
 
     // Cargar los datos del archivo JSON al cargar el componente
     useEffect(() => {
         fetch('./nivelmedio.json')
             .then(response => response.json())
             .then(data => setSedes(data))
-            .catch(error => console.error('Error cargando el archivo JSON:', error));
+            .catch(error => console.error('Error cargando el archivo nivelmedio.json:', error));
+
+        fetch('./sala_nuevo.json')
+            .then(response => response.json())
+            .then(data => setSalas(data))
+            .catch(error => console.error('Error cargando el archivo sala_nuevo.json:', error));
     }, []);
 
-    // Función para buscar la sede en base al CI ingresado
+    // Función para buscar la sede y la sala en base al CI ingresado
     const handleSearch = () => {
-        const found = sedes.find(sede =>
+        const foundSede = sedes.find(sede =>
             parseInt(ci) >= sede.ci_desde &&
             parseInt(ci) <= sede.ci_hasta
         );
 
-        if (found) {
-            setResult(found.sede);
-            setUbicacion(found.ubicacion);
-        } else {
-            setResult('No se encontró la sede.');
+        const foundSala = salas.find(sala =>
+            parseInt(ci) === parseInt(sala.cedula)
+        );
+
+        if (foundSede && foundSala) {
+            setResult(foundSede.sede);
+            setUbicacion(foundSede.ubicacion);
+            setSalaResult(foundSala.sala);
+        } else{
             setUbicacion(null);
+            setSalaResult('No se encontró la sala.');
+            setResult('No se encontró la sede.');
         }
     };
 
@@ -34,6 +47,7 @@ const SearchSede = () => {
         setCi('');
         setResult(null);
         setUbicacion(null);
+        setSalaResult(null);
     };
 
     return (
@@ -70,10 +84,15 @@ const SearchSede = () => {
                     )}
                 </div>
             )}
-            {/* cl4v3s3cr3tA_d */}
-            <p className="subtitle is-8">Desarrollado por Lic. David Espinola Benitez</p>
+            {salaResult && (
+                <div>
+                    <p className="subtitle is-5">Su sala es: {salaResult}</p>
+                </div>
+            )}
+            <p className="subtitle is-8">Desarrollado por: Lic. David Espinola Benitez</p>
         </div>
     );
 };
 
 export default SearchSede;
+
