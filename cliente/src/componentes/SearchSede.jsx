@@ -89,7 +89,7 @@ const SearchSede = () => {
                     <p className="subtitle is-5">Su sala es: {salaResult}</p>
                 </div>
             )}
-            <p className="subtitle is-8">Desarrollado por: Lic. David Espinola Benitez</p>
+            <p className="subtitle is-8">Mg Ariel López Director Departamental de Educación</p>
         </div>
     );
 };
